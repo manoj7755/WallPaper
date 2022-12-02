@@ -9,9 +9,11 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class viewModelActivity(val wallpaperRepository: wallpaperRepository): ViewModel(){
+
      var  data  = MutableLiveData<PhotoModel>()
 
     fun getPhotoV(query:String,par_page:String){
+
          wallpaperRepository.getPhototR(query,par_page).enqueue(object :Callback<PhotoModel>{
              override fun onResponse(call: Call<PhotoModel>, response: Response<PhotoModel>) {
                   data.postValue(response.body())
@@ -25,4 +27,5 @@ class viewModelActivity(val wallpaperRepository: wallpaperRepository): ViewModel
 
          })
     }
+
 }
