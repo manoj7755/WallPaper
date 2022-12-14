@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.wallpaper.Activity.MainActivity
 import com.example.wallpaper.ModelClass.textsSearch
 import com.example.wallpaper.R
 import kotlinx.android.synthetic.main.row_tem_of_text_search.view.*
@@ -20,6 +21,10 @@ class recycleviewOfTextSearchAdapter(val context: Context,val textSearchData:Arr
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
    holder.textSearch.text = textSearchData[position].textSearch
+        holder.textSearch.setOnClickListener {
+            (context as MainActivity).requestListener("Dog","10")
+        }
+
     }
 
     override fun getItemCount(): Int {

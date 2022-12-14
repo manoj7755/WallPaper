@@ -1,9 +1,9 @@
-package com.example.wallpaper.Adapter
+package com.example.wallpaper.ActivityViewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.photoapi.PhotoModel
-import com.example.wallpaper.wallpaperRepository
+import com.example.wallpaper.Api.wallpaperRepository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
